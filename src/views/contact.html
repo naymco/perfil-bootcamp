@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <% include partials/head.html%>
+
+</head>
+<body>
+        <% include partials/navigation.html %>
+
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="card-header text-center bg-light">
+                    <h3>Contáctame</h3>
+                    <p>Si deseas contactar conmigo puedes hacerlo por medio de este formulario, o también a mi email: alexsantos2018@outlook.es.</p>
+                </div>
+
+                <div class="card-body bg-light">
+                    <form method="POST" action="/sendform">
+                        <div class="form-group">
+                            <input name="email" type="text" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="mensaje" class="form-control" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success btn-block">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <% include partials/footer.html %>
+
+</body>
+</html>
